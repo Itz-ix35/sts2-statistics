@@ -1,0 +1,70 @@
+<head>
+    <meta charset="utf-8">
+    <title>Statistics</title>
+</head>
+
+<style>
+body {
+	font-family: "Segoe UI", sans-serif;
+	padding: 20px;
+	background: #313039;
+	color: #ffffff;
+}
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.subsection {
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	gap: 40px;
+}
+.run-table {
+	border-collapse: collapse;
+	margin-bottom: 1em;
+	text-align: center;
+	margin-top: 1.5em;
+	margin-bottom: 5.5em;
+}
+.run-table th,
+.run-table td {
+	border: 1px solid #ccc;
+	padding: 4px 8px;
+	vertical-align: middle;
+}
+th::after {
+	content: "▲";
+	right: 1px;
+	opacity: 0.2;
+	transition: opacity 0.2s;
+}
+th.desc::after {
+	content: "▼";
+	opacity: 1;
+}
+th.asc::after {
+	content: "▲";
+	opacity: 1;
+}
+</style>
+
+<div class="section" id="outer">
+	<h1>Statistics</h1>
+	<div class="subsection" id="checkboxes">
+		<label>
+			<input type="checkbox" id="check1" checked> 只统计胜局
+		</label>
+		<label>
+			<input type="checkbox" id="check2"> 只统计进阶 10
+		</label>
+	</div>
+	<div class="section" id="cntCard"></div>
+</div>
+
+<script src="main.js"></script>
